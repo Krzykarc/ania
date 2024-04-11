@@ -1,0 +1,15 @@
+:root {
+    --color-primary: #1995c8;
+    --color-primary-dark: #06254e;
+    --color-secondary: #b7814b;
+    --color-secondary-dark: #363435;
+    --color-tertiary: #e7e6e6;
+    --color-tertiary-light: #f3eeee;
+
+    --font-primary-color: #000;
+    --font-secondary-color: #fff;
+    --font-primary-name: 'Open Sans', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --font-primary-size: 16px;
+
+    --mobile-width: 768px;
+}

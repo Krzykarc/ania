@@ -1,0 +1,29 @@
+.leftToCenter {
+    animation-name: leftToCenter;
+    animation-duration: 4s;
+}
+
+@keyframes leftToCenter {
+    0% {
+        transform: translate(-300px);
+        opacity: 0;
+    }
+    65% {
+        transform: translate(20px);
+    }
+}
+
+.rightToCenter {
+    animation-name: rightToCenter;
+    animation-duration: 4s;
+}
+
+@keyframes rightToCenter {
+    0% {
+        transform: translate(300px);
+        opacity: 0;
+    }
+    65% {
+        transform: translate(-20px);
+    }
+}

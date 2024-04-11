@@ -1,0 +1,33 @@
+.h1 {
+    padding: 2rem 1rem;
+    font-size: 4rem;
+    font-family: 'FontAwesome', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.h2 {
+    padding: 2rem 1rem;
+    font-size: 3rem;
+    font-family: 'FontAwesome', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.h3 {
+    display: flex;
+    font-size: 3rem;
+    font-family: 'FontAwesome', sans-serif;
+    justify-content: center;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+}
+
+.h4 {
+    display: flex;
+    font-size: 2rem;
+    font-family: 'FontAwesome', sans-serif;
+    justify-content: center;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+}
