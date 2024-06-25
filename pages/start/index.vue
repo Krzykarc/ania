@@ -1,7 +1,7 @@
 <template>
   <div :class="style.headings">
     <h1 :class="[style.h1, style.leftToCenter, style.lightFont]">
-      Fizjoterapeutka Anna Górzyńska
+      Fizjoterapeutka Anna Ignaś
     </h1>
     <h2 :class="[style.h2, style.rightToCenter, style.lightFont]">Terapeutka manualna</h2>
   </div>
@@ -19,9 +19,10 @@
   flex-direction: column;
   justify-content: center;
   height: 100dvh;
-  overflow:hidden;  
+  overflow: hidden;  
 
-  background-image: linear-gradient(to right, #0004, #0004), url('./start-background-2.jpeg');
+  background-image: linear-gradient(to right, #0004, #0004), url('./anna-ignas-masaz.jpg');
+  background-position: bottom;
   width: 100%;
   background-size: cover;
 }

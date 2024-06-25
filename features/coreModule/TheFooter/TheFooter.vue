@@ -10,10 +10,10 @@
       title="Jak dojechać"
     ></iframe> -->
     <address :class="style.address">
-      <a href="mailto: a.m.gorzynska@gmail.com" :class="style.link"><img :src="phoneIcon" :class="style.icon" /> a.m.gorzynska@gmail.com</a>
-      <a href="tel: +48660100318" :class="style.link"><img :src="emailIcon" :class="style.icon" /> 660 100 318</a>
+      <a href="mailto: a.m.gorzynska@gmail.com" :class="style.link"><img :src="emailIcon" :class="style.icon" /> a.m.gorzynska@gmail.com</a>
+      <a href="tel: +48660100318" :class="style.link"><img :src="phoneIcon" :class="style.icon" /> 660 100 318</a>
     </address>
-    <div :class="style.copyright">© 2024 FizjowAnko</div>
+    <div :class="style.copyright">© 2024 Fizjoterapia Anna Ignaś</div>
   </footer>
 </template>
 

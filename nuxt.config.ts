@@ -4,7 +4,7 @@ export default defineNuxtConfig({
           htmlAttrs: {
               lang: 'pl',
           },
-          title: 'SiemAnko! Boli kolAnko? Zapraszam na masowAnko!',
+          title: 'Fizjoterapeutka Anna Ignaś',
           charset: 'utf-8',
       },
       rootId: 'fizjoApp'

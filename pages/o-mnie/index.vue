@@ -5,26 +5,29 @@
       <div>
         <figure>
           <img :src="profilePhoto" :class="style.profilePhoto" />
-          <figcaption :class="[style.paragraph, style.center]">mgr Anna Górzyńska</figcaption>
+          <figcaption :class="[style.paragraph, style.center]">mgr Anna Ignaś</figcaption>
         </figure>
         <article :class="style.paragraph">
           <p :class="style.center ">Ukończyłam Uniwersytet Medyczny im. Karola Marcinkowskiego w Poznaniu. W mojej praktyce z pacjentami priorytetem jest eliminacja bólu i przywracanie pełnej funkcji. Na początku terapii stosuję delikatne techniki przeciwbólowe, a następnie przechodzę do energicznych technik PINOTERAPII, które pozwalają przywrócić zakres ruchu w stawach. Moim celem jest szybkie osiągnięcie indywidualnych wyników poprzez zastosowanie spersonalizowanych ćwiczeń, który pomagają utrwalić efekty terapii.</p>
           <br />
           <h4 :class="style.h4">Kursy</h4>
-          <ul :class="style.courseList">
-            <li v-for="(course, index) in courses" :key="index" :class="style.courseItem">
+          <AppSlider :slides="courses" :class="style.courseList">
+            <template #default="{ slide: course }">
+              <div :class="style.courseItem">
               {{ course.date }}
               <template v-for="descriptionLine in course.description">
                 <br />
                 {{ descriptionLine }}
               </template>
-            </li>
-          </ul>
+            </div>
+            </template>
+          </AppSlider>
           <h4 :class="style.h4">Dokumenty</h4>
           <ul :class="style.documents">
             <li v-for="(singleDocument, index) in documents" :key="index" :class="style.document">
-              <br />
-              <a :href="`./files/${singleDocument.file}`" download="">📄 {{ singleDocument.label }}</a>
+              <a :href="`./files/${singleDocument.file}`" :aria-label="singleDocument.label" target="_blank">
+                <img :src="singleDocument.img" :class="style.documentImage" />
+              </a>
             </li>
           </ul>
         </article>
@@ -34,7 +37,15 @@
 </template>
 
 <script setup lang="ts">
-import profilePhoto from './fizjoterapeutka-anna-gorzynska.jpg';
+import AppSlider from '@/features/design/components/slider/AppSlider.vue';
+
+import deepDocument from './assets/anna-ignas-masaz-gleboki.jpg';
+import backboneDocument from './assets/anna-ignas-kregoslup.jpg';
+import manualDocument from './assets/anna-ignas-terapia-manualna.jpg';
+import pinoDocument from './assets/anna-ignas-pinoterapia.jpg';
+import studiesDocument from './assets/anna-ignas-studia.jpg';
+import jobDocument from './assets/anna-ignas-prawo-wykonywania-zawodu.jpg';
+import profilePhoto from './assets/anna-ignas-profilowe.jpg';
 
 interface Course {
   date: string
@@ -83,32 +94,39 @@ const courses: Course[] = [
 interface Document {
   label: string,
   file: string,
+  img: string,
 }
 
 const documents: Document[] = [
   {
     label: 'Dyplom ukończenia studiów',
     file: 'dyplom_ukonczenia_studiow.pdf',
+    img: studiesDocument,
   },
   {
     label: 'Certyfikat z kursu Sztuka i nauka manipulacji kręgosłupa i wybranych stawów',
     file: 'kregoslup.pdf',
+    img: backboneDocument,
   },
   {
     label: 'Pinoterapia',
     file: 'pinoterapia.pdf',
+    img: pinoDocument,
   },
   {
     label: 'Prawo wykonywania zawodu',
     file: 'prawo_wykonywania_zawodu.pdf',
+    img: jobDocument,
   },
   {
     label: 'Certyfikat z kursu Podstawy terapii manualnej z wprowadzeniem do technik manipulacji',
     file: 'terapia_manualna.pdf',
+    img: manualDocument,
   },
   {
     label: 'Certyfikat z Masażu tkanek głębokich',
     file: 'tkanki_glebokie.pdf',
+    img: deepDocument,
   },
 ]
 </script>
@@ -130,11 +148,10 @@ const documents: Document[] = [
 
 .profilePhoto {
   max-width: 100%;
-  aspect-ratio: 3/2;
 }
 
 .courseList {
-  list-style: none;
+  text-align: center;
 }
 .courseItem {
   margin: 0;
@@ -144,6 +161,29 @@ const documents: Document[] = [
 
 .documents {
   list-style: none;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 16px;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .documents {
+    grid-template-columns: auto auto;
+  }
+}
+
+.documentImage {
+  border: solid 1px var(--color-primary-dark);
+  transition: 0.8s;
+}
+
+.documentImage:hover {
+  transform: scale(1.2);
+}
+
+.documents:hover .documentImage:not(:hover) {
+  transform: scale(0.8);
 }
 
 .center {

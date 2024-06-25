@@ -1,5 +1,5 @@
 <template>
-  <TheHeader :class="[style.header, !isScrollOnTop && style.headerHidden]" />
+  <TheHeader :class="style.header" />
   <main :class="style.main">
     <div :class="style.pagesContainer">
       <div id="start" :class="style.page">
@@ -22,10 +22,6 @@ import { TheFooter, TheHeader } from "@/features/coreModule";
 import StartPage from "@/pages/start/index.vue";
 import ServicesPage from "@/pages/uslugi/index.vue";
 import AboutMePage from "@/pages/o-mnie/index.vue";
-
-import { useScrollOnTop } from "@/features/dom/useScrollOnTop";
-
-const { isScrollOnTop } = useScrollOnTop();
 </script>
 
 <style module="style">
@@ -49,19 +45,6 @@ body {
   grid-template-rows: max-content 1fr max-content;
 
   background-color: var(--color-tertiary);
-}
-
-.header {
-  transition: all 1s;
-}
-
-.headerHidden {
-  background-color: var(--color-tertiary-light);
-  border-bottom: 1px solid currentColor;
-}
-
-.headerHidden a:any-link {
-  color: var(--font-primary-color);
 }
 
 .footer {
@@ -101,7 +84,7 @@ body {
 
 @media screen and (max-width: 768px) {
   .page {
-    scroll-margin-top: 400px;
+    scroll-margin-top: unset;
   }
 }
 </style>
