@@ -1,7 +1,13 @@
 const MOBILE_BREAKPOINT_PX: Readonly<number> = 768;
 
 export const useRwd = () => {
-  const screenWidth: Ref<number> = ref(window?.innerWidth ?? 0);
+  const screenWidth: Ref<number> = ref(0);
+
+  onMounted(() => {
+    if (process.client) {
+      screenWidth.value = window.innerWidth;
+    }
+  })
 
   const setWidth = () => {
     screenWidth.value = window.innerWidth;
