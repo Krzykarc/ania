@@ -4,7 +4,7 @@ export const useRwd = () => {
   const screenWidth: Ref<number> = ref(window.innerWidth);
 
   const setWidth = () => {
-    screenWidth.value = window.innerWidth;
+    screenWidth.value = window?.innerWidth ?? 0;
   };
 
   if (process.client) {
