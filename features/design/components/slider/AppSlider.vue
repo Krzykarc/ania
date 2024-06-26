@@ -72,6 +72,13 @@ const showNextSlide = () => {
   width: 100px;
 }
 
+@media screen and (max-width: 480px) {
+  .icon {
+    width: 50px;
+  }
+}
+
+
 .content {
     display: flex;
     justify-content: center;
