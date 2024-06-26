@@ -6,6 +6,7 @@ export default defineNuxtConfig({
           },
           title: 'Fizjoterapeutka Anna Ignaś',
           charset: 'utf-8',
+          viewport: 'width=device-width, initial-scale=1',
       },
       rootId: 'fizjoApp'
   },
