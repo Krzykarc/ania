@@ -118,7 +118,7 @@ const hideMenu = (): void => {
 }
 
 .headerMobile {
-  position: absolute;
+  position: fixed;
   width: 100%;
 }
 
