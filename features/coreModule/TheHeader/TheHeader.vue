@@ -1,5 +1,5 @@
 <template>
-  <header :class="[style.header, style.headerDesktop, !isScrollOnTop && style.headerHidden]" v-if="!isMobile">
+  <header :class="[style.header, style.headerDesktop, !isScrollOnTop && style.headerHidden]" v-if="isMobile === false">
     <nav>
       <ul :class="style.linkList">
         <li :class="[style.linkItem, isScrollOnTop && style.fbLogo]">
@@ -18,7 +18,7 @@
       </ul>
     </nav>
   </header>
-  <header :class="[style.header, style.headerMobile]" v-else>
+  <header :class="[style.header, style.headerMobile]" v-else-if="isMobile === true">
     <button
       :class="style.headerMobileOpenButton"
       aria-label="Otwórz menu"

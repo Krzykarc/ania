@@ -24,7 +24,7 @@
           </AppSlider>
           <h4 :class="style.h4">Dokumenty</h4>
           <ul :class="style.documents">
-            <li v-for="(singleDocument, index) in documents" :key="index" :class="style.document">
+            <li v-for="(singleDocument, index) in documents" :key="index" :class="style.documentItem">
               <a :href="`./files/${singleDocument.file}`" :aria-label="singleDocument.label" target="_blank">
                 <img :src="singleDocument.img" :class="style.documentImage" />
               </a>
@@ -176,6 +176,10 @@ const documents: Document[] = [
 .documentImage {
   border: solid 1px var(--color-primary-dark);
   transition: 0.8s;
+}
+
+.documentItem {
+  max-width: 250px;
 }
 
 .documentImage:hover {

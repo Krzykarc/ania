@@ -23,7 +23,10 @@ export const useRwd = () => {
     }
   });
 
-  const isMobile: ComputedRef<boolean> = computed(() => {
+  const isMobile: ComputedRef<boolean | null> = computed(() => {
+    if(screenWidth.value === 0) {
+      return null;
+    }
     return screenWidth.value <= MOBILE_BREAKPOINT_PX;
   })
 
