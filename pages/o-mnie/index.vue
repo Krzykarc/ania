@@ -159,6 +159,12 @@ const documents: Document[] = [
   margin-bottom: 1rem;
 }
 
+@media screen and (max-width: 768px) {
+  .courseItem {
+    font-size: 1rem;
+  }
+}
+
 .documents {
   list-style: none;
   display: grid;

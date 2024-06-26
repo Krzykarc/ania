@@ -1,5 +1,5 @@
 <template>
-  <TheHeader :class="style.header" />
+  <TheHeader />
   <main :class="style.main">
     <div :class="style.pagesContainer">
       <div id="start" :class="style.page">
