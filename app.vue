@@ -59,25 +59,16 @@ body {
   margin: 0;
 }
 
-/* TODO header height to vars */
 .main {
-  /* padding-top: 100px; */
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-@media screen and (max-width: 768px) {
-  .main {
-    /* padding-top: 400px; */
-  }
 }
 
 .pagesContainer {
   width: 100%;
 }
 
-/* TODO header height to vars */
 .page {
   scroll-margin-top: 100px;
 }
