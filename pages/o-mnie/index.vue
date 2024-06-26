@@ -179,6 +179,12 @@ const documents: Document[] = [
   }
 }
 
+@media screen and (max-width: 480px) {
+  .documents {
+    grid-template-columns: auto;
+  }
+}
+
 .documentImage {
   border: solid 1px var(--color-primary-dark);
   transition: 0.8s;
