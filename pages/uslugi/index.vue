@@ -8,7 +8,7 @@
           <li v-for="(service, index) in services" :key="index" :class="[style.serviceItem, style[`serviceItem${index}`]]">
             <figure :class="style.singleService">
               <img :src="service.icon" :class="style.icon" />
-              <figcaption>{{ service.label }}</figcaption>
+              <figcaption :class="style.iconCaption">{{ service.label }}</figcaption>
             </figure>
           </li>
         </ul>
@@ -23,6 +23,8 @@ import classicalMassageIcon from './icons/body-massage.png';
 import deepMassageIcon from './icons/massage.png';
 import kobidoIcon from './icons/facial-massage.png';
 import preventIcon from './icons/prevention.png';
+import lymphaticDrainageIcon from './icons/lymphatic-drainage.png';
+import lymphaticDrainageWithCompressionIcon from './icons/lymphatic-drainage-with-compression.png';
 
 interface Service {
   label: string,
@@ -50,6 +52,14 @@ const services: Service[] = [
     label: 'fizjoprofilaktyka',
     icon: preventIcon
   },
+  {
+    label: 'drenaż limfatyczny',
+    icon: lymphaticDrainageIcon
+  },
+  {
+    label: 'drenaż limfatyczny z kompresoterapią',
+    icon: lymphaticDrainageWithCompressionIcon
+  },
 ]
 </script>
 
@@ -68,7 +78,7 @@ const services: Service[] = [
 
 .servicesList {
   display: grid;
-  grid-template-areas: 'a a b b c c' '. d d e e .';
+  grid-template-areas: 'a a b b c c' '. d d e e .' '. f f g g .';
   align-content: center;
   row-gap: 80px;
   font-family: 'FontAwesome', sans-serif;
@@ -96,6 +106,12 @@ const services: Service[] = [
 .serviceItem4 {
   grid-area: e;
 }
+.serviceItem5 {
+  grid-area: f;
+}
+.serviceItem6 {
+  grid-area: g;
+}
 .singleService {
   display: flex;
   flex-direction: column;
@@ -105,5 +121,9 @@ const services: Service[] = [
 
 .icon {
   width: 100px;
+}
+
+.iconCaption {
+  text-align: center;
 }
 </style>

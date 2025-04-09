@@ -10,8 +10,9 @@
       title="Jak dojechać"
     ></iframe> -->
     <address :class="style.address">
-      <a href="mailto: a.m.gorzynska@gmail.com" :class="style.link"><img :src="emailIcon" :class="style.icon" /> a.m.gorzynska@gmail.com</a>
-      <a href="tel: +48660100318" :class="style.link"><img :src="phoneIcon" :class="style.icon" /> 660 100 318</a>
+      <a href="mailto: a.m.gorzynska@gmail.com" :class="style.link"><img :src="emailIcon" :class="style.icon" />a.m.gorzynska@gmail.com</a>
+      <a href="tel: +48660100318" :class="style.link"><img :src="phoneIcon" :class="style.icon" />660 100 318</a>
+      <a href="https://maps.app.goo.gl/Pvygm17Z8EtQACh4A" :class="style.link" target="_blank"><img :src="addressIcon" :class="style.icon" />Jana Matejski 16/120, 78-100 Kołobrzeg</a>
     </address>
     <div :class="style.copyright">© 2024 Fizjoterapia Anna Ignaś</div>
   </footer>
@@ -20,6 +21,7 @@
 <script setup lang="ts">
 import phoneIcon from './phone.png';
 import emailIcon from './mail.png';
+import addressIcon from './address.png';
 </script>
 
 <style module="style">

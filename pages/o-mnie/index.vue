@@ -45,6 +45,8 @@ import manualDocument from './assets/anna-ignas-terapia-manualna.jpg';
 import pinoDocument from './assets/anna-ignas-pinoterapia.jpg';
 import studiesDocument from './assets/anna-ignas-studia.jpg';
 import jobDocument from './assets/anna-ignas-prawo-wykonywania-zawodu.jpg';
+import craniosacralDocument from './assets/anna-ignas-terapia-czaszkowo-krzyzowa.jpg';
+import antiEdematousDocument from './assets/anna-ignas-terapia-przeciwobrzekowa.jpg';
 import profilePhoto from './assets/anna-ignas-profilowe.jpg';
 
 interface Course {
@@ -128,6 +130,16 @@ const documents: Document[] = [
     file: 'tkanki_glebokie.pdf',
     img: deepDocument,
   },
+  {
+    label: 'Certyfikat z kursu Terapia czaszkowo-krzyżowa',
+    file: 'terapia_czaszkowo_krzyzowa.pdf',
+    img: craniosacralDocument,
+  },
+  {
+    label: 'Certyfikat z kursu Masażu tkanek głębokich',
+    file: 'terapia_przeciwobrzekowa.pdf',
+    img: antiEdematousDocument,
+  },
 ]
 </script>
 
@@ -173,31 +185,33 @@ const documents: Document[] = [
 
 .documents {
   list-style: none;
-  display: grid;
-  grid-template-columns: auto auto auto;
+  display: flex;
+  flex-wrap: wrap;
   gap: 16px;
   justify-content: center;
 }
 
+.documentItem {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+}
+
 @media screen and (max-width: 768px) {
-  .documents {
-    grid-template-columns: auto auto;
+  .documentItem {
+    width: 48%;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .documents {
-    grid-template-columns: auto;
+  .documentItem  {
+    width: 100%;
   }
 }
 
 .documentImage {
   border: solid 1px var(--color-primary-dark);
   transition: 0.8s;
-}
-
-.documentItem {
-  max-width: 250px;
 }
 
 .documentImage:hover {
