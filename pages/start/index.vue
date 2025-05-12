@@ -3,7 +3,7 @@
     <h1 :class="[style.h1, style.leftToCenter, style.lightFont]">
       Fizjoterapeutka Anna Ignaś
     </h1>
-    <h2 :class="[style.h2, style.rightToCenter, style.lightFont]">Masaż i rehabilitacja w Kołobrzegu</h2>
+    <h2 :class="[style.h2, style.rightToCenter, style.lightFont]">Masaże i rehabilitacja w Kołobrzegu</h2>
   </div>
 </template>
 
