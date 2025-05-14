@@ -26,10 +26,10 @@ import ServicesPage from "@/pages/uslugi/index.vue";
 import AboutMePage from "@/pages/o-mnie/index.vue";
 
 useHead({
-  title: 'Kołobrzeg – Rehabilitacja, Fizjoterapia, Masaże – Anna Ignaś',
+  title: 'Kołobrzeg – Rehabilitacja, Fizjoterapia, Terapia Manualna – Anna Ignaś',
   meta: [
-    { name: 'description', content: 'Profesjonalny masaż, rehabilitacja i fizjoterapia w Kołobrzegu. Masaże klasyczne, terapia manualna, masaże lecznicze. Umów się na wizytę!' },
-    { name: 'keywords', content: 'masaż Kołobrzeg, masaże Kołobrzeg, masaż relaksacyjny Kołobrzeg, rehabilitacja Kołobrzeg, fizjoterapia Kołobrzeg, terapia manualna Kołobrzeg' }
+    { name: 'description', content: 'Rehabilitacja i fizjoterapia w Kołobrzegu. Masaże klasyczne, terapia manualna, terapia czaszkowo-krzyżowa. Umów się na wizytę!' },
+    { name: 'keywords', content: 'rehabilitacja Kołobrzeg, fizjoterapia Kołobrzeg, terapia manualna Kołobrzeg, terapia przeciwobrzękowa, terapia czaszkowo-krzyżowa' }
   ]
 })
 </script>
