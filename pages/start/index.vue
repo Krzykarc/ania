@@ -3,7 +3,7 @@
     <h1 :class="[style.h1, style.leftToCenter, style.lightFont]">
       Fizjoterapeutka Anna Ignaś
     </h1>
-    <h2 :class="[style.h2, style.rightToCenter, style.lightFont]">Terapeutka manualna</h2>
+    <h2 :class="[style.h2, style.rightToCenter, style.lightFont]">Terapia manualna</h2>
   </div>
 </template>
 

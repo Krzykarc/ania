@@ -17,11 +17,21 @@
 </template>
 
 <script setup lang="ts">
+import { useHead } from '#imports'
+
 import { TheFooter, TheHeader } from "@/features/coreModule";
 
 import StartPage from "@/pages/start/index.vue";
 import ServicesPage from "@/pages/uslugi/index.vue";
 import AboutMePage from "@/pages/o-mnie/index.vue";
+
+useHead({
+  title: 'Kołobrzeg – Rehabilitacja, Fizjoterapia, Terapia Manualna – Anna Ignaś',
+  meta: [
+    { name: 'description', content: 'Rehabilitacja i fizjoterapia w Kołobrzegu. Masaże klasyczne, terapia manualna, terapia czaszkowo-krzyżowa. Umów się na wizytę!' },
+    { name: 'keywords', content: 'rehabilitacja Kołobrzeg, fizjoterapia Kołobrzeg, terapia manualna Kołobrzeg, terapia przeciwobrzękowa, terapia czaszkowo-krzyżowa' }
+  ]
+})
 </script>
 
 <style module="style">
