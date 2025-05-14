@@ -17,11 +17,21 @@
 </template>
 
 <script setup lang="ts">
+import { useHead } from '#imports'
+
 import { TheFooter, TheHeader } from "@/features/coreModule";
 
 import StartPage from "@/pages/start/index.vue";
 import ServicesPage from "@/pages/uslugi/index.vue";
 import AboutMePage from "@/pages/o-mnie/index.vue";
+
+useHead({
+  title: 'Kołobrzeg – Rehabilitacja, Fizjoterapia, Masaże – Anna Ignaś',
+  meta: [
+    { name: 'description', content: 'Profesjonalny masaż, rehabilitacja i fizjoterapia w Kołobrzegu. Masaże klasyczne, terapia manualna, masaże lecznicze. Umów się na wizytę!' },
+    { name: 'keywords', content: 'masaż Kołobrzeg, masaże Kołobrzeg, masaż relaksacyjny Kołobrzeg, rehabilitacja Kołobrzeg, fizjoterapia Kołobrzeg, terapia manualna Kołobrzeg' }
+  ]
+})
 </script>
 
 <style module="style">

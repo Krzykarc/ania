@@ -8,7 +8,7 @@
           <figcaption :class="[style.paragraph, style.center]">mgr Anna Ignaś</figcaption>
         </figure>
         <article :class="style.paragraph">
-          <p :class="style.center ">Ukończyłam Uniwersytet Medyczny im. Karola Marcinkowskiego w Poznaniu. W mojej praktyce z pacjentami priorytetem jest eliminacja bólu i przywracanie pełnej funkcji. Na początku terapii stosuję delikatne techniki przeciwbólowe, a następnie przechodzę do energicznych technik PINOTERAPII, które pozwalają przywrócić zakres ruchu w stawach. Moim celem jest szybkie osiągnięcie indywidualnych wyników poprzez zastosowanie spersonalizowanych ćwiczeń, który pomagają utrwalić efekty terapii.</p>
+          <p :class="style.center">Ukończyłam Uniwersytet Medyczny im. Karola Marcinkowskiego w Poznaniu. Jako doświadczona fizjoterapeutka oferuję masaże w Kołobrzegu, terapię manualną oraz rehabilitację. Moim priorytetem jest eliminacja bólu i przywracanie pełnej sprawności. Stosuję delikatne techniki przeciwbólowe oraz skuteczną pinoterapię, która poprawia zakres ruchu w stawach. Każdą terapię uzupełniam indywidualnie dobranymi ćwiczeniami, aby utrwalić efekty masażu i rehabilitacji. Jeśli interesuje Cię profesjonalna fizjoterapia lub masaże w Kołobrzegu, zapraszam do kontaktu.</p>
           <br />
           <h4 :class="style.h4">Kursy</h4>
           <AppSlider :slides="courses" :class="style.courseList">
